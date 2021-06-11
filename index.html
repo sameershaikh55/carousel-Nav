@@ -19,50 +19,39 @@
 body { font-family: sans-serif; }
 
 .gallery {
-  background: #EEE;
+  margin-right: 0px !important;
+  width: 100vw;
+  background: #000;
 }
 
 .gallery-cell:nth-child(1) {
   width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  background: url("https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  height: 500px;
+  background: url("assets/0002.jpg");
   /* counter-increment: gallery-cell; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 .gallery-cell:nth-child(2) {
   width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  background: url("https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  height: 500px;
+  background: url("assets/GALERIE\ -\ 001.jpg");
   /* counter-increment: gallery-cell; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 .gallery-cell:nth-child(3) {
   width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  background: url("https://images.unsplash.com/photo-1623092475365-cad86ed1a263?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  height: 500px;
+  background: url("assets/SEITE\ 04\ -.jpg");
   /* counter-increment: gallery-cell; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 .gallery-cell:nth-child(4) {
   width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  background: url("https://images.unsplash.com/photo-1623096210960-e12ded3873c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-  /* counter-increment: gallery-cell; */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.gallery-cell:nth-child(5) {
-  width: 100%;
-  height: 400px;
-  margin-right: 10px;
-  background: url("https://images.unsplash.com/photo-1457731752788-eecd748c32b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  height: 500px;
+  background: url("assets/TOP\ HOME\ 03.jpg");
   /* counter-increment: gallery-cell; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,17 +102,42 @@ body { font-family: sans-serif; }
   opacity: 1;
   background: transparent;
   border-radius: 0px;
-  border: 2px solid white;
+  border: 2px solid #000;
+  background: #000;
 }
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
-  background: white;
-}    </style>
+  background: #aa8b3c;
+  border: 2px solid #aa8b3c;
+}    
+.navbar {
+  background-color: #000;
+}
+.navbar-toggler{
+  padding: 0px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: #000;
+}
+.navbar-dark .navbar-toggler-icon {
+  transition: 0.5s;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png');
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #aa8b3c !important;
+}
+.navbar-nav .nav-link.active {
+  color: #f3f6f3 !important;
+}
+</style>
 </head>
 <body>
 <!-- CAROUSEL START -->
-<div class="gallery js-flickity" data-flickity='{ "autoPlay": true }'>
-    <div class="gallery-cell"></div>
+<!-- <div class="gallery js-flickity" data-flickity='{ "autoPlay": true }'> -->
+<div class="gallery js-flickity">
     <div class="gallery-cell"></div>
     <div class="gallery-cell"></div>
     <div class="gallery-cell"></div>
@@ -131,34 +145,32 @@ body { font-family: sans-serif; }
 </div>
 <!-- CAROUSEL END -->
 
-<!-- NAVBAR STRAT -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="text-white navbar-brand" href="#">Logo</a>
+      <button id="hamberger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="text-white nav-link active" aria-current="page" href="#">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="text-white nav-link" href="#">SHOP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="text-white nav-link" href="#">ARTISTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">MATERIALS</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">INFORMATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">SHOPPING CART</a>
           </li>
         </ul>
       </div>
@@ -167,5 +179,17 @@ body { font-family: sans-serif; }
 <!-- NAVBAR END -->
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+  <script>
+    const hamb = document.getElementById("hamberger");
+    const icon = document.querySelector('.navbar-toggler-icon')
+    hamb.addEventListener('click', () => {
+      if (hamb.getAttribute('aria-expanded') === "true") {
+        icon.style.backgroundImage = "url('https://icon-library.com/images/menu-icon-white-png/menu-icon-white-png-5.jpg')"
+        } else {
+        icon.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png')"
+        }
+    })
+  </script>
 </body>
 </html>
