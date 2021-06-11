@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Carousel</title>
+
+    <style>
+* {
+    padding: 0%;
+    margin: 0%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell:nth-child(1) {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  background: url("https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  /* counter-increment: gallery-cell; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-cell:nth-child(2) {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  background: url("https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  /* counter-increment: gallery-cell; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-cell:nth-child(3) {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  background: url("https://images.unsplash.com/photo-1623092475365-cad86ed1a263?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  /* counter-increment: gallery-cell; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-cell:nth-child(4) {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  background: url("https://images.unsplash.com/photo-1623096210960-e12ded3873c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  /* counter-increment: gallery-cell; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-cell:nth-child(5) {
+  width: 100%;
+  height: 400px;
+  margin-right: 10px;
+  background: url("https://images.unsplash.com/photo-1457731752788-eecd748c32b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  /* counter-increment: gallery-cell; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(gallery-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+    width: auto;
+  bottom: 3%;
+  right: 1%;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  background: transparent;
+  border-radius: 0px;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}    </style>
+</head>
+<body>
+<!-- CAROUSEL START -->
+<div class="gallery js-flickity" data-flickity='{ "autoPlay": true }'>
+    <div class="gallery-cell"></div>
+    <div class="gallery-cell"></div>
+    <div class="gallery-cell"></div>
+    <div class="gallery-cell"></div>
+    <div class="gallery-cell"></div>
+</div>
+<!-- CAROUSEL END -->
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
