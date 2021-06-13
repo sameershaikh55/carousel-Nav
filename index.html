@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
     <title>Carousel</title>
-
     <style>
 * {
     padding: 0%;
     margin: 0%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Bodoni Moda', serif;
 }
 
 body { font-family: sans-serif; }
@@ -150,8 +152,35 @@ body { font-family: sans-serif; }
 }
 .navbar-nav .nav-link.active {
   color: #f3f6f3 !important;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  
 }
-
+.navbar-brand img {
+width: 70px;
+height: 70px;
+}
+.nav-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.nav-link {
+  font-size: 1.4rem;
+}
+li.nastedLink:hover .nestedNav {
+    display: block;
+    opacity: 1;
+}
+.nestedNav {
+  background-color: #fff;
+  left: 0%;
+  width: 125px;
+  border: 1px solid rgb(242, 242, 242);
+  display: none;
+  opacity: 0;
+  transition: 1s;
+  border-top: 3px solid #aa8b3c;
+}
 @media screen and (max-width: 1500px) {
   .gallery {
   height: 800px;
@@ -562,6 +591,7 @@ body { font-family: sans-serif; }
   width: 15px;
   height: 15px;
 }
+
 }
 </style>
 </head>
@@ -579,29 +609,50 @@ body { font-family: sans-serif; }
 <!-- NAVBAR START -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="text-white navbar-brand" href="#">Logo</a>
+      <a class="text-white navbar-brand" href="#">
+        <img src="assets/Logo.png" alt="logo">
+      </a>
       <button id="hamberger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="text-white nav-link active" aria-current="page" href="#">HOME</a>
+            <a class="text-white nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item nastedLink position-relative">
+            <a class="text-white nav-link" href="#">Shop</a>
+            <div class="position-absolute shadow rounded-1 py-1 px-2 nestedNav">
+                <ul class="list-unstyled">
+                  <li class="pointer">
+                  <a class="text-decoration-none text-dark font-weight-bold" href="">
+                    Sub Items
+                  </a>
+                  </li>
+                  <li class="pointer">
+                    <a class="text-decoration-none text-dark font-weight-bold" href="">
+                      Sub Items
+                    </a>
+                  </li>
+                  <li class="pointer">
+                    <a class="text-decoration-none text-dark font-weight-bold" href="">
+                      Sub Items
+                    </a>
+                  </li>
+                </ul>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link" href="#">SHOP</a>
+            <a class="text-white nav-link" href="#">Artists</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link" href="#">ARTISTS</a>
+            <a class="text-white nav-link" href="#">Materials</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link" href="#">MATERIALS</a>
+            <a class="text-white nav-link" href="#">Information</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link" href="#">INFORMATION</a>
-          </li>
-          <li class="nav-item">
-            <a class="text-white nav-link" href="#">SHOPPING CART</a>
+            <a class="text-white nav-link" href="#">Warenkorb</a>
           </li>
         </ul>
       </div>
