@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  font-family: 'Bodoni Moda', serif;
+}
+html {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+.pointer {
+  cursor: grab;
+}
+    .navbar {
+  background-color: #000;
+}
+.navbar-toggler{
+  padding: 0px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: #000;
+}
+.navbar-dark .navbar-toggler-icon {
+  transition: 0.5s;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png');
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #aa8b3c !important;
+}
+.navbar-nav .nav-link.active {
+  color: #f3f6f3 !important;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    content:  none;
+}
+
+.navbar {
+  background-color: #000 !important;
+}
+.navbar-toggler{
+  padding: 0px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: #000;
+}
+.navbar-dark .navbar-toggler-icon {
+  transition: 0.5s;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/768px-Hamburger_icon_white.svg.png');
+  height: 25px;
+  width: 25px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #aa8b3c !important;
+}
+.navbar-nav .nav-link.active {
+  color: #f3f6f3 !important;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  
+}
+.navbar-brand img {
+width: 48px;
+height: 48px;
+}
+.nav-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.nav-link {
+  font-size: 2rem;
+}
+li.nastedLink:hover .nestedNav {
+    display: block;
+    opacity: 1;
+}
+.nestedNav {
+  background-color: #fff;
+  left: 0%;
+  width: 125px;
+  border: 1px solid rgb(242, 242, 242);
+  display: none;
+  opacity: 0;
+  transition: 1s;
+  border-top: 3px solid #aa8b3c;
+}
+
+/* CAROUSEL START */
+.carousel-indicators {
+    position: absolute;
+    right: 0% !important;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin-left: -24%;
+    margin-bottom: 0px;
+}
+
+  .carousel-indicators li {
+    cursor: pointer;
+    bottom: 0px;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    background: transparent;
+    border-radius: 0px;
+    border: 1px solid #000;
+    background: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.carousel-indicators .active {
+    border: none !important;
+    bottom: 0px;
+    background: #aa8b3c;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    border-radius: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (min-width: 768px){
+.navbar {
+ border-radius: 0px;
+}
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar-brand img {
+width: 70px;
+height: 70px;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0% !important;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin-left: -8%;  
+}
+
+  .carousel-indicators li {
+    cursor: pointer;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    background: transparent;
+    border-radius: 0px;
+    border: 1px solid #000;
+    background: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.carousel-indicators .active {
+    border: none !important;
+    bottom: 0px;
+    background: #aa8b3c;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    border-radius: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+}
+/* CAROUSEL END */
